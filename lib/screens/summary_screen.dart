@@ -56,8 +56,13 @@ class SummaryScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: theme.colorScheme.primary,
                   foregroundColor: theme.colorScheme.onPrimary,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
             ],
@@ -66,15 +71,14 @@ class SummaryScreen extends StatelessWidget {
       );
     }
 
-    // Determine some text/colors based on overall performance
     final isPassingOverall = average >= 50;
     final feedbackText = average >= 80
         ? 'Excellent academic performance! Keep it up!'
         : average >= 65
-            ? 'Good work! You are performing well.'
-            : average >= 50
-                ? 'Passed, but there is room for improvement.'
-                : 'Failing status. Consider focusing more on studies.';
+        ? 'Good work! You are performing well.'
+        : average >= 50
+        ? 'Passed, but there is room for improvement.'
+        : 'Failing status. Consider focusing more on studies.';
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
@@ -95,7 +99,6 @@ class SummaryScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // Main Grade Summary Card
           Card(
             elevation: 4,
             shadowColor: theme.colorScheme.primary.withAlpha(38),
@@ -131,7 +134,9 @@ class SummaryScreen extends StatelessWidget {
                         Text(
                           isPassingOverall ? 'PASSING' : 'FAILING',
                           style: theme.textTheme.headlineMedium?.copyWith(
-                            color: isPassingOverall ? theme.colorScheme.secondary : theme.colorScheme.error,
+                            color: isPassingOverall
+                                ? theme.colorScheme.secondary
+                                : theme.colorScheme.error,
                             fontWeight: FontWeight.w900,
                             letterSpacing: 0.5,
                           ),
@@ -174,8 +179,6 @@ class SummaryScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 24),
-
-          // Statistics Grid
           Row(
             children: [
               Expanded(
@@ -203,7 +206,6 @@ class SummaryScreen extends StatelessWidget {
           ),
           const SizedBox(height: 24),
 
-          // Passing / Failing Lists details
           Card(
             shape: theme.cardTheme.shape,
             color: theme.cardTheme.color,
@@ -281,10 +283,7 @@ class SummaryScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 4),
-            Text(
-              title,
-              style: theme.textTheme.bodyMedium,
-            ),
+            Text(title, style: theme.textTheme.bodyMedium),
           ],
         ),
       ),
@@ -319,7 +318,10 @@ class SummaryScreen extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 2,
+                    ),
                     decoration: BoxDecoration(
                       color: color.withAlpha(31),
                       borderRadius: BorderRadius.circular(12),

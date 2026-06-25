@@ -25,7 +25,7 @@ class _AddSubjectScreenState extends State<AddSubjectScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    
+
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
       child: Column(
@@ -81,7 +81,9 @@ class _AddSubjectScreenState extends State<AddSubjectScreen> {
                     const SizedBox(height: 20),
                     TextFormField(
                       controller: _markController,
-                      keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                      keyboardType: const TextInputType.numberWithOptions(
+                        decimal: true,
+                      ),
                       decoration: const InputDecoration(
                         labelText: 'Marks Obtained',
                         hintText: 'Enter marks between 0 and 100',
@@ -115,28 +117,34 @@ class _AddSubjectScreenState extends State<AddSubjectScreen> {
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           final name = _nameController.text.trim();
-                          final mark = double.parse(_markController.text.trim());
-                          
+                          final mark = double.parse(
+                            _markController.text.trim(),
+                          );
+
                           final newSubject = Subject(name: name, mark: mark);
-                          
-                          final provider = Provider.of<GradeTrackerProvider>(context, listen: false);
+
+                          final provider = Provider.of<GradeTrackerProvider>(
+                            context,
+                            listen: false,
+                          );
                           provider.addSubject(newSubject);
-                          
-                          // Clear the form fields
+
                           _nameController.clear();
                           _markController.clear();
-                          
-                          // Inform the user
+
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: Text('$name added successfully with grade ${newSubject.grade}!'),
+                              content: Text(
+                                '$name added successfully with grade ${newSubject.grade}!',
+                              ),
                               backgroundColor: theme.colorScheme.secondary,
                               behavior: SnackBarBehavior.floating,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
                             ),
                           );
-                          
-                          // Switch to the Subject List tab
+
                           provider.setTabIndex(1);
                         }
                       },

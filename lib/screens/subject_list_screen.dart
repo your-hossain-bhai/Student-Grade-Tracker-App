@@ -51,8 +51,13 @@ class SubjectListScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: theme.colorScheme.primary,
                   foregroundColor: theme.colorScheme.onPrimary,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
             ],
@@ -89,7 +94,6 @@ class SubjectListScreen extends StatelessWidget {
                 ),
               ),
               confirmDismiss: (direction) async {
-                // Returns true if dismissed
                 return true;
               },
               onDismissed: (direction) {
@@ -144,15 +148,21 @@ class SubjectListScreen extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 12),
                                 Icon(
-                                  isPassing ? Icons.check_circle_outline_rounded : Icons.cancel_outlined,
+                                  isPassing
+                                      ? Icons.check_circle_outline_rounded
+                                      : Icons.cancel_outlined,
                                   size: 16,
-                                  color: isPassing ? theme.colorScheme.secondary : theme.colorScheme.error,
+                                  color: isPassing
+                                      ? theme.colorScheme.secondary
+                                      : theme.colorScheme.error,
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
                                   isPassing ? 'Passing' : 'Failing',
                                   style: theme.textTheme.bodyMedium?.copyWith(
-                                    color: isPassing ? theme.colorScheme.secondary : theme.colorScheme.error,
+                                    color: isPassing
+                                        ? theme.colorScheme.secondary
+                                        : theme.colorScheme.error,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),

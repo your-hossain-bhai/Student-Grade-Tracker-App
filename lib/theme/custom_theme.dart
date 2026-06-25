@@ -6,23 +6,23 @@ class CustomTheme {
       useMaterial3: true,
       brightness: Brightness.light,
       colorScheme: const ColorScheme.light(
-        primary: Color(0xFF5D3FD3), // Deep Indigo
+        primary: Color(0xFF5D3FD3),
         onPrimary: Colors.white,
-        primaryContainer: Color(0xFFEDE9FE), // Light Violet
-        onPrimaryContainer: Color(0xFF6D28D9), // Deep Violet
-        secondary: Color(0xFF0D9488), // Teal/Secondary (representing passing grade)
+        primaryContainer: Color(0xFFEDE9FE),
+        onPrimaryContainer: Color(0xFF6D28D9),
+        secondary: Color(0xFF0D9488),
         onSecondary: Colors.white,
-        secondaryContainer: Color(0xFFCCFBF1), // Light Teal
-        onSecondaryContainer: Color(0xFF0F766E), // Deep Teal
-        surface: Color(0xFFF8FAFC), // Off-white/slate-50
-        onSurface: Color(0xFF0F172A), // Dark slate-900
-        error: Color(0xFFEF4444), // Crimson Red (representing failing grade)
+        secondaryContainer: Color(0xFFCCFBF1),
+        onSecondaryContainer: Color(0xFF0F766E),
+        surface: Color(0xFFF8FAFC),
+        onSurface: Color(0xFF0F172A),
+        error: Color(0xFFEF4444),
         onError: Colors.white,
-        errorContainer: Color(0xFFFEE2E2), // Light Red
-        onErrorContainer: Color(0xFF991B1B), // Deep Red
-        outline: Color(0xFFCBD5E1), // Slate-300
+        errorContainer: Color(0xFFFEE2E2),
+        onErrorContainer: Color(0xFF991B1B),
+        outline: Color(0xFFCBD5E1),
       ),
-      scaffoldBackgroundColor: const Color(0xFFF1F5F9), // Soft slate background
+      scaffoldBackgroundColor: const Color(0xFFF1F5F9),
       cardTheme: const CardThemeData(
         color: Colors.white,
         elevation: 2,
@@ -45,7 +45,10 @@ class CustomTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: Color(0xFFCBD5E1)),
@@ -76,8 +79,16 @@ class CustomTheme {
         elevation: 8,
       ),
       textTheme: const TextTheme(
-        headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
-        titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
+        headlineMedium: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFF0F172A),
+        ),
+        titleLarge: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFF0F172A),
+        ),
         bodyLarge: TextStyle(fontSize: 16, color: Color(0xFF334155)),
         bodyMedium: TextStyle(fontSize: 14, color: Color(0xFF64748B)),
       ),
@@ -89,23 +100,23 @@ class CustomTheme {
       useMaterial3: true,
       brightness: Brightness.dark,
       colorScheme: const ColorScheme.dark(
-        primary: Color(0xFF8B5CF6), // Bright Violet
+        primary: Color(0xFF8B5CF6),
         onPrimary: Colors.white,
-        primaryContainer: Color(0xFF4C1D95), // Dark Violet
-        onPrimaryContainer: Color(0xFFDDD6FE), // Lavender
-        secondary: Color(0xFF14B8A6), // Teal
+        primaryContainer: Color(0xFF4C1D95),
+        onPrimaryContainer: Color(0xFFDDD6FE),
+        secondary: Color(0xFF14B8A6),
         onSecondary: Color(0xFF0F172A),
-        secondaryContainer: Color(0xFF115E59), // Dark Teal
-        onSecondaryContainer: Color(0xFFCCFBF1), // Light Teal
-        surface: Color(0xFF1E293B), // Slate-800
-        onSurface: Color(0xFFF1F5F9), // Light Slate-100
-        error: Color(0xFFF87171), // Bright Crimson
+        secondaryContainer: Color(0xFF115E59),
+        onSecondaryContainer: Color(0xFFCCFBF1),
+        surface: Color(0xFF1E293B),
+        onSurface: Color(0xFFF1F5F9),
+        error: Color(0xFFF87171),
         onError: Color(0xFF7F1D1D),
         errorContainer: Color(0xFF7F1D1D),
         onErrorContainer: Color(0xFFFEE2E2),
-        outline: Color(0xFF475569), // Slate-600
+        outline: Color(0xFF475569),
       ),
-      scaffoldBackgroundColor: const Color(0xFF0F172A), // Slate-900
+      scaffoldBackgroundColor: const Color(0xFF0F172A),
       cardTheme: CardThemeData(
         color: const Color(0xFF1E293B),
         elevation: 2,
@@ -128,7 +139,10 @@ class CustomTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: const Color(0xFF0F172A),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: Color(0xFF475569)),
@@ -159,8 +173,16 @@ class CustomTheme {
         elevation: 8,
       ),
       textTheme: const TextTheme(
-        headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xFFF1F5F9)),
-        titleLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFFF1F5F9)),
+        headlineMedium: TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFFF1F5F9),
+        ),
+        titleLarge: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: Color(0xFFF1F5F9),
+        ),
         bodyLarge: TextStyle(fontSize: 16, color: Color(0xFFE2E8F0)),
         bodyMedium: TextStyle(fontSize: 14, color: Color(0xFF94A3B8)),
       ),
