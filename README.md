@@ -68,7 +68,7 @@ List<Subject> get failingSubjects => _subjects.where((s) => s.mark < 50).toList(
 ## How to Run
 
 ### Prerequisites
-Make sure you have [Flutter SDK](https://docs.flutter.dev/get-started/install) installed on your system.
+Make sure you have  [Flutter SDK](https://docs.flutter.dev/get-started/install) installed on your system.
 
 ### Running the App
 1. Clone the repository to your local system.
